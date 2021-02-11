@@ -1,0 +1,265 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>EducaEstágio</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Course Project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap4/bootstrap.min.css' %}">
+    <link href="{% static 'plugins/fontawesome-free-5.0.1/css/fontawesome-all.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/teachers_styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/teachers_responsive.css' %}">
+</head>
+
+<body>
+
+    <div class="super_container">
+        <!-- Header -->
+        <header class=" d-flex flex-row">
+            <div class="header_content d-flex flex-row align-items-center">
+                <!-- Logo -->
+                <div class="logo_container">
+                    <div class="logo">
+                        <img src="{% static 'images/capelo.svg' %}" width="70" alt="">
+                        <span>EducaEstágio</span>
+                    </div>
+                </div>
+
+                <!-- Main Navigation -->
+                <nav class="main_nav_container">
+                    <div class="main_nav">
+                        <ul class="main_nav_list">
+                            <li class="main_nav_item"><a href="{% static 'index.html' %}">Início</a></li>
+                            <li class="main_nav_item"><a href="{% static 'candidato.html' %}">Candidatos</a></li>
+                            <li class="main_nav_item"><a href="{% static 'empresa.html' %}">Empresa</a></li>
+                            <li class="main_nav_item"><a href="{% static 'ie.html' %}">Instituições</a></li>
+                            <li class="main_nav_item"><a href="{% static 'sobre.html' %}">Sobre</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="header_side d-flex flex-row justify-content-center align-items-center">
+                <span><a href="{% static 'login.html' %}">Entrar/Cadastrar</a></span>
+            </div>
+
+            <!-- Hamburger -->
+            <div class="hamburger_container">
+                <i class="fas fa-bars trans_200"></i>
+            </div>
+
+        </header>
+
+        <!-- Menu -->
+        <div class="menu_container menu_mm">
+
+            <!-- Menu Close Button -->
+            <div class="menu_close_container">
+                <div class="menu_close"></div>
+            </div>
+
+            <!-- Menu Items -->
+            <div class="menu_inner menu_mm">
+                <div class="menu menu_mm">
+                    <ul class="menu_list menu_mm">
+                        <li class="menu_item menu_mm"><a href="{% static 'index.html' %}">Início</a></li>
+                        <li class="menu_item menu_mm"><a href="{% static 'candidato' %}">Candidatos</a></li>
+                        <li class="menu_item menu_mm"><a href="{% static 'empresa.html' %}">Empresas</a></li>
+                        <li class="menu_item menu_mm"><a href="{% static 'ie.html' %}">Instituições</a></li>
+                        <li class="menu_item menu_mm"><a href="{% static 'sobre.html' %}">Sobre</a></li>
+                        <li class="menu_item menu_mm"><a href="{% static 'login.html' %}">ENTRAR</a> </li>
+                    </ul>
+
+                    <!-- Menu Social -->
+
+                    <div class="menu_social_container menu_mm">
+                        <ul class="menu_social menu_mm">
+                            <li class="menu_social_item menu_mm"><a href="{% static '#' %}"><i class="fab fa-pinterest"></i></a></li>
+                            <li class="menu_social_item menu_mm"><a href="{% static '#' %}"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li class="menu_social_item menu_mm"><a href="{% static '#' %}"><i class="fab fa-instagram"></i></a></li>
+                            <li class="menu_social_item menu_mm"><a href="{% static '#' %}"><i class="fab fa-facebook-f"></i></a></li>
+                            <li class="menu_social_item menu_mm"><a href="{% static '#' %}"><i class="fab fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Home -->
+
+        <div class="home">
+            <div class="home_background_container prlx_parent">
+                <div class="home_background prlx" style="background-image:url({% static 'images/devs-background.jpg' %})"></div>
+            </div>
+            <div class="home_content">
+                <h1>Desenvolvedores</h1>
+            </div>
+        </div>
+
+        <!-- Desenvolvedores -->
+
+        <div class="teachers page_section">
+            <div class="container">
+                <div class="row">
+
+                    <!-- Ana Célia -->
+                    <div class="col-lg-4 teacher">
+                        <div class="card">
+                            <div class="card_img">
+                                <div class="card_plus trans_200 text-center"><a href="{% static '#' %}">+</a></div>
+                                <img class="card-img-top trans_200" src="{% static 'images/ana.jpg' %}" alt="">
+                            </div>
+                            <div class="card-body text-center">
+                                <div class="card-title"><a href="{% static '#' %}">Ana Célia Santos</a></div>
+                                <div class="card-text"></div>
+                                <div class="teacher_social">
+                                    <ul class="menu_social">
+                                        <li class="menu_social_item"><a href="{% static '#' %}"><i class="fab fa-pinterest"></i></a></li>
+                                        <li class="menu_social_item"><a href="{% static '#' %}"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li class="menu_social_item"><a href="{% static '#' %}"><i class="fab fa-instagram"></i></a></li>
+                                        <li class="menu_social_item"><a href="{% static '#' %}"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li class="menu_social_item"><a href="{% static '#' %}"><i class="fab fa-twitter"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Camila -->
+                    <div class="col-lg-4 teacher">
+                        <div class="card">
+                            <div class="card_img">
+                                <div class="card_plus trans_200 text-center"><a href="{% static '#' %}">+</a></div>
+                                <img class="card-img-top trans_200" src="{% static 'images/camila.jpg' %}" alt="">
+                            </div>
+                            <div class="card-body text-center">
+                                <div class="card-title"><a href="{% static '#' %}">Camila Mendes</a></div>
+                                <div class="card-text"></div>
+                                <div class="teacher_social">
+                                    <ul class="menu_social">
+                                        <li class="menu_social_item"><a href="{% static '#' %}"><i class="fab fa-pinterest"></i></a></li>
+                                        <li class="menu_social_item"><a href="{% static '#' %}"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li class="menu_social_item"><a href="{% static '#' %}"><i class="fab fa-instagram"></i></a></li>
+                                        <li class="menu_social_item"><a href="{% static '#' %}"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li class="menu_social_item"><a href="{% static '#' %}"><i class="fab fa-twitter"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Luciana -->
+                    <div class="col-lg-4 teacher">
+                        <div class="card">
+                            <div class="card_img">
+                                <div class="card_plus trans_200 text-center"><a href="{% static '#' %}">+</a></div>
+                                <img class="card-img-top trans_200" height="467px" src="{% static 'images/luciana.png' %}" alt="">
+                            </div>
+                            <div class="card-body text-center">
+                                <div class="card-title"><a href="{% static '#' %}">Luciana</a></div>
+                                <div class="card-text"></div>
+                                <div class="teacher_social">
+                                    <ul class="menu_social">
+                                        <li class="menu_social_item"><a href="{% static '#' %}"><i class="fab fa-pinterest"></i></a></li>
+                                        <li class="menu_social_item"><a href="{% static '#' %}"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li class="menu_social_item"><a href="{% static '#' %}"><i class="fab fa-instagram"></i></a></li>
+                                        <li class="menu_social_item"><a href="{% static '#' %}"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li class="menu_social_item"><a href="{% static '#' %}"><i class="fab fa-twitter"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Maria Jackeline -->
+                    <div class="col-lg-4 teacher">
+                        <div class="card">
+                            <div class="card_img">
+                                <div class="card_plus trans_200 text-center"><a href="{% static '#' %}">+</a></div>
+                                <!-- <img class="card-img-top trans_200" src="{% static 'images/jack.jpg' %}" alt=""> -->
+                            </div>
+                            <div class="card-body text-center">
+                                <div class="card-title"><a href="{% static '#' %}">Maria Jackeline</a></div>
+                                <div class="card-text"></div>
+                                <div class="teacher_social">
+                                    <ul class="menu_social">
+                                        <li class="menu_social_item"><a href="{% static '#' %}"><i class="fab fa-pinterest"></i></a></li>
+                                        <li class="menu_social_item"><a href="{% static '#' %}"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li class="menu_social_item"><a href="{% static '#' %}"><i class="fab fa-instagram"></i></a></li>
+                                        <li class="menu_social_item"><a href="{% static '#' %}"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li class="menu_social_item"><a href="{% static '#' %}"><i class="fab fa-twitter"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Samuel -->
+                    <div class="col-lg-4 teacher">
+                        <div class="card">
+                            <div class="card_img">
+                                <div class="card_plus trans_200 text-center"><a href="{% static '#' %}">+</a></div>
+                                <!-- <img class="card-img-top trans_200" src="{% static 'images/samuel.jpg' %}" alt=""> -->
+                            </div>
+                            <div class="card-body text-center">
+                                <div class="card-title"><a href="{% static '#' %}">Samuel</a></div>
+                                <div class="card-text"></div>
+                                <div class="teacher_social">
+                                    <ul class="menu_social">
+                                        <li class="menu_social_item"><a href="{% static '#' %}"><i class="fab fa-pinterest"></i></a></li>
+                                        <li class="menu_social_item"><a href="{% static '#' %}"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li class="menu_social_item"><a href="{% static '#' %}"><i class="fab fa-instagram"></i></a></li>
+                                        <li class="menu_social_item"><a href="{% static '#' %}"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li class="menu_social_item"><a href="{% static '#' %}"><i class="fab fa-twitter"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Welisson Moura -->
+                    <div class="col-lg-4 teacher">
+                        <div class="card">
+                            <div class="card_img">
+                                <div class="card_plus trans_200 text-center"><a href="{% static '#' %}">+</a></div>
+                                <img class="card-img-top trans_200" height="467px" src="{% static 'images/welisson.jpg' %}" alt="">
+                            </div>
+                            <div class="card-body text-center">
+                                <div class="card-title"><a href="{% static '#' %}">Welisson Moura</a></div>
+                                <div class="card-text"></div>
+                                <div class="teacher_social">
+                                    <ul class="menu_social">
+                                        <li class="menu_social_item"><a href="{% static '#' %}"><i class="fab fa-pinterest"></i></a></li>
+                                        <li class="menu_social_item"><a href="{% static '#' %}"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li class="menu_social_item"><a href="{% static '#' %}"><i class="fab fa-instagram"></i></a></li>
+                                        <li class="menu_social_item"><a href="{% static '#' %}"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li class="menu_social_item"><a href="{% static '#' %}"><i class="fab fa-twitter"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'styles/bootstrap4/popper.js' %}"></script>
+    <script src="{% static 'styles/bootstrap4/bootstrap.min.js' %}"></script>
+    <script src="{% static 'plugins/greensock/TweenMax.min.js' %}"></script>
+    <script src="{% static 'plugins/greensock/TimelineMax.min.js' %}"></script>
+    <script src="{% static 'plugins/scrollmagic/ScrollMagic.min.js' %}"></script>
+    <script src="{% static 'plugins/greensock/animation.gsap.min.js' %}"></script>
+    <script src="{% static 'plugins/greensock/ScrollToPlugin.min.js' %}"></script>
+    <script src="{% static 'plugins/scrollTo/jquery.scrollTo.min.js' %}"></script>
+    <script src="{% static 'plugins/easing/easing.js' %}"></script>
+    <script src="{% static 'js/teachers_custom.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,528 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>EducaEstágio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="{% static 'pag-canditato/css/animate.css' %}">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="{% static 'pag-canditato/css/icomoon.css' %}">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="{% static 'pag-canditato/css/bootstrap.css' %}">
+    <!-- Flexslider  -->
+    <link rel="stylesheet" href="{% static 'pag-canditato/css/flexslider.css' %}">
+    <!-- Flaticons  -->
+    <link rel="stylesheet" href="{% static 'pag-canditato/fonts/flaticon/font/flaticon.css' %}">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="{% static 'pag-canditato/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'pag-canditato/css/owl.theme.default.min.css' %}">
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="{% static 'pag-canditato/css/style.css' %}">
+
+    <!-- Modernizr JS -->
+    <script src="{% static 'pag-canditato/js/modernizr-2.6.2.min.js' %}"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+<script src="{% static 'js/respond.min.js' %}"></script>
+<![endif]-->
+
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="{% static 'regform/regform/fonts/material-icon/css/material-design-iconic-font.min.css' %}">
+    <link rel="stylesheet" href="{% static 'regform/regform/vendor/nouislider/nouislider.min.css' %}">
+
+    <!-- Main css -->
+    <!-- <link rel="stylesheet" href="{% static 'regform/regform/css/styleform.css' %}"> -->
+</head>
+
+<body>
+
+    <div class="super_container">
+        <div id="colorlib-page">
+            <div class="container-wrap">
+                <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+                <aside id="colorlib-aside" role="complementary" class="border js-fullheight">
+                    <div class="text-center">
+                        <div class="author-img" style="background-image: url({% static 'pag-canditato/images/defaunt-user.png' %});"></div>
+                        <h1 id="colorlib-logo"><a>Caio Rolando da Rocha</a></h1>
+                    </div>
+                    <nav id="colorlib-main-menu" role="navigation" class="navbar">
+                        <div id="navbar" class="collapse">
+                            <ul>
+                                <li><a href="#" data-nav-section="curriculo">Curriculo</a></li>
+                                <li><a href="#" data-nav-section="vagas">Vagas disponíveis</a></li>
+                                <li><a href="#" data-nav-section="legislacao">Legislação</a></li>
+                                <li><a href="#" data-nav-section="configuracoes">Configurações</a></li>
+                                <li><a href="#" data-nav-section="contato">Contate-nos</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul>
+                                <li><a href="index.html">Sair</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </aside>
+
+                <div id="colorlib-main">
+
+                    <!-- CURRICULO -->
+
+                    <section class="colorlib-about" data-section="curriculo">
+                        <div class="colorlib-narrow-content">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="main">
+
+                                        <!-- Formulario do curriculo -->
+                                        <div class="container">
+                                            <div class="signup-content">
+                                                <div class="signup-form">
+                                                    <form method="POST" class="register-form" id="register-form">
+                                                        <div class="form-row">
+
+                                                            <div class="form-group">
+                                                                <div class="form-input">
+                                                                    <label for="first_name" class="required">Nome completo</label>
+                                                                    <input type="text" name="first_name" id="first_name" />
+                                                                </div>
+                                                                <div class="form-input">
+                                                                    <label for="last_name" class="required">Email</label>
+                                                                    <input type="text" name="last_name" id="last_name" />
+                                                                </div>
+                                                                <div class="form-input">
+                                                                    <label for="company" class="required">RG</label>
+                                                                    <input type="text" name="company" id="company" />
+                                                                </div>
+                                                                <div class="form-input">
+                                                                    <label for="company" class="required">CPF</label>
+                                                                    <input type="text" name="company" id="company" />
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <div class="form-select">
+                                                                    <div class="label-flex">
+                                                                        <label for="meal_preference">Nacionalidade</label>
+                                                                    </div>
+                                                                    <div class="select-list">
+                                                                        <select name="nacionalidade" id="nacionalidade">
+																		<option>Brasil</option>
+																		<option>Cuba</option>
+																		<option>Japão</option>
+																	</select>
+                                                                    </div>
+                                                                    <div class="label-flex">
+                                                                        <label for="meal_preference">Estado</label>
+                                                                    </div>
+                                                                    <div class="select-list">
+                                                                        <select name="estado" id="estado">
+																			<option>Piauí</option>
+																			<option>São Paulo</option>
+																			<option>Fortaleza</option>
+																		</select>
+                                                                    </div>
+                                                                </div>
+                                                                <br>
+                                                                <div class="form-radio">
+                                                                    <div class="label-flex">
+                                                                        <label for="payment">Gênero</label>
+                                                                    </div>
+                                                                    <div class="form-radio-group">
+                                                                        <div class="form-radio-item">
+                                                                            <input type="radio" name="sexo" id="sexo" checked>
+                                                                            <label for="cash">Feminino</label>
+                                                                            <span class="check"></span>
+                                                                        </div>
+                                                                        <div class="form-radio-item">
+                                                                            <input type="radio" name="sexo" id="sexo">
+                                                                            <label for="cheque">Masculino</label>
+                                                                            <span class="check"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <br>
+                                                                <div class="label-flex">
+                                                                    <label for="meal_preference">Etnia</label>
+                                                                </div>
+                                                                <div class="select-list">
+                                                                    <select name="etnia" id="etnia">
+																		<option value="Vegetarian">Branco</option>
+																		<option value="Kosher">Pardo</option>
+																		<option value="Asian Vegetarian">Preto</option>
+																		<option value="Asian Vegetarian">Amarelo</option>
+																	</select>
+                                                                </div>
+                                                                <div class="label-flex">
+                                                                    <label for="meal_preference">Estado Civil</label>
+                                                                </div>
+                                                                <div class="select-list">
+                                                                    <select name="estadocivil" id="estadocivil">
+																		<option value="Vegetarian">Solteiro (a)</option>
+																		<option value="Kosher">Casado (a)</option>
+																		<option value="Asian Vegetarian">Separado (a)</option>
+																		<option value="Asian Vegetarian">Viúvo (a)</option>
+																	</select>
+                                                                </div>
+                                                                <br>
+                                                                <div class="form-radio">
+                                                                    <div class="label-flex">
+                                                                        <label for="payment">Portador de Deficiência?</label>
+                                                                    </div>
+                                                                    <div class="form-radio-group">
+                                                                        <div class="form-radio-item">
+                                                                            <input type="radio" name="port" id="port" checked>
+                                                                            <label for="cash">Não</label>
+                                                                            <span class="check"></span>
+                                                                        </div>
+                                                                        <div class="form-radio-item">
+                                                                            <input type="radio" name="port" id="port">
+                                                                            <label for="cheque">Sim</label>
+                                                                            <span class="check"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <br>
+                                                                <div class="form-input">
+                                                                    <label for="chequeno">Endereço Completo</label>
+                                                                    <input type="text" name="chequeno" id="chequeno" />
+                                                                </div>
+                                                                <div class="form-input">
+                                                                    <label for="blank_name">Número</label>
+                                                                    <input type="text" name="blank_name" id="blank_name" />
+                                                                </div>
+                                                                <div class="form-input">
+                                                                    <label for="payable">Complemento</label>
+                                                                    <input type="text" name="payable" id="payable" />
+                                                                </div>
+                                                                <div class="form-input">
+                                                                    <label for="chequeno">Cidade</label>
+                                                                    <input type="text" name="chequeno" id="chequeno" />
+                                                                </div>
+                                                                <div class="form-input">
+                                                                    <label for="blank_name">Bairro</label>
+                                                                    <input type="text" name="blank_name" id="blank_name" />
+                                                                </div>
+                                                                <div class="form-input">
+                                                                    <label for="payable">Cep</label>
+                                                                    <input type="text" name="payable" id="payable" />
+                                                                </div>
+                                                                <div class="form-input">
+                                                                    <label for="payable">Telefone</label>
+                                                                    <input type="text" name="payable" id="payable" />
+                                                                </div>
+                                                                <br>
+                                                                <div class="form-radio">
+                                                                    <div class="label-flex">
+                                                                        <label for="payment">Está estagiando ou trabalhando atualmente?</label>
+                                                                    </div>
+                                                                    <div class="form-radio-group">
+                                                                        <div class="form-radio-item">
+                                                                            <input type="radio" name="esta" id="esta" checked>
+                                                                            <label for="cash">Não</label>
+                                                                            <span class="check"></span>
+                                                                        </div>
+                                                                        <div class="form-radio-item">
+                                                                            <input type="radio" name="esta" id="esta">
+                                                                            <label for="esta">Sim</label>
+                                                                            <span class="check"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-radio">
+                                                                    <div class="label-flex">
+                                                                        <label for="payment">Possui Carteira de Habilitação? (CNH)?</label>
+                                                                    </div>
+                                                                    <div class="form-radio-group">
+                                                                        <div class="form-radio-item">
+                                                                            <input type="radio" name="cnh" id="cnh" checked>
+                                                                            <label for="cash">Não</label>
+                                                                            <span class="check"></span>
+                                                                        </div>
+                                                                        <div class="form-radio-item">
+                                                                            <input type="radio" name="cnh" id="cnh">
+                                                                            <label for="cheque">Sim</label>
+                                                                            <span class="check"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-radio">
+                                                                    <div class="label-flex">
+                                                                        <label for="payment">Possui carro próprio?</label>
+                                                                    </div>
+                                                                    <div class="form-radio-group">
+                                                                        <div class="form-radio-item">
+                                                                            <input type="radio" name="carro" id="carro" checked>
+                                                                            <label for="cash">Não</label>
+                                                                            <span class="check"></span>
+                                                                        </div>
+                                                                        <div class="form-radio-item">
+                                                                            <input type="radio" name="carro" id="carro">
+                                                                            <label for="cheque">Sim</label>
+                                                                            <span class="check"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-radio">
+                                                                    <div class="label-flex">
+                                                                        <label for="payment">Possui moto própria?</label>
+                                                                    </div>
+                                                                    <div class="form-radio-group">
+                                                                        <div class="form-radio-item">
+                                                                            <input type="radio" name="moto" id="moto" checked>
+                                                                            <label for="cash">Não</label>
+                                                                            <span class="check"></span>
+                                                                        </div>
+                                                                        <div class="form-radio-item">
+                                                                            <input type="radio" name="moto" id="moto">
+                                                                            <label for="cheque">Sim</label>
+                                                                            <span class="check"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <br>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-submit">
+                                                            <input type="submit" value="Submit" class="submit" id="submit" name="submit" />
+                                                            <input type="submit" value="Reset" class="submit" id="reset" name="reset" />
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="colorlib-services" data-section="vagas">
+                        <div class="colorlib-narrow-content">
+                            <div class="services page_section">
+
+                                <div class="">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="section_title text-center">
+                                                <h1>Painel de Vagas</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row services_row">
+
+                                        <div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+                                            <div class="icon_container d-flex flex-column justify-content-end">
+                                                <!-- <img src="{% static 'images/earth-globe.svg' %}" alt=""> -->
+                                            </div>
+                                            <h3>Artes Gráficas</h3>
+                                            <p>Bolsa: R$ 720,00</p>
+                                        </div>
+
+                                        <div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+                                            <div class="icon_container d-flex flex-column justify-content-end">
+                                                <!-- <img src="{% static 'images/exam.svg' %}" alt=""> -->
+                                            </div>
+                                            <h3>Ciência da Computação</h3>
+                                            <p>Bolsa: R$ 865,14</p>
+                                        </div>
+
+                                        <div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+                                            <div class="icon_container d-flex flex-column justify-content-end">
+                                                <!-- <img src="{% static 'images/books.svg' %}" alt=""> -->
+                                            </div>
+                                            <h3>Direito</h3>
+                                            <p>Bolsa: R$ 665,00</p>
+                                        </div>
+
+                                        <div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+                                            <div class="icon_container d-flex flex-column justify-content-end">
+                                                <!-- <img src="{% static 'images/professor.svg' %}" alt=""> -->
+                                            </div>
+                                            <h3>Rádio e Televisão</h3>
+                                            <p>Bolsa: R$ 500,00</p>
+                                        </div>
+
+                                        <div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+                                            <div class="icon_container d-flex flex-column justify-content-end">
+                                                <!-- <img src="{% static 'images/blackboard.svg' %}" alt=""> -->
+                                            </div>
+                                            <h3>Administração</h3>
+                                            <p>Bolsa: R$ 900,00</p>
+                                        </div>
+
+                                        <div class="col-lg-4 service_item text-left d-flex flex-column align-items-start justify-content-start">
+                                            <div class="icon_container d-flex flex-column justify-content-end">
+                                                <!-- <img src="{% static 'images/mortarboard.svg' %}" alt=""> -->
+                                            </div>
+                                            <h3>Design</h3>
+                                            <p>Bolsa: R$ 754,57</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="colorlib-skills" data-section="legislacao">
+                        <div class="colorlib-narrow-content">
+                            <P>Legislação</P>
+
+                        </div>
+                    </section>
+
+                    <section class="colorlib-education" data-section="configuracoes">
+                        <div class="colorlib-narrow-content">
+                            <p>Configurações</p>
+
+                        </div>
+                    </section>
+
+                    <section class="colorlib-contact" data-section="contato">
+                        <div class="colorlib-narrow-content">
+                            <div class="row">
+                                <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+                                    <span class="heading-meta">Fale conosco</span>
+                                    <h2 class="colorlib-heading">Entre em contato</h2>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
+                                        <div class="colorlib-icon">
+                                            <i class="icon-globe-outline"></i>
+                                        </div>
+                                        <div class="colorlib-text">
+                                            <p><a href="#">emailgenerico@generico.com</a></p>
+                                        </div>
+                                    </div>
+
+                                    <div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
+                                        <div class="colorlib-icon">
+                                            <i class="icon-map"></i>
+                                        </div>
+                                        <div class="colorlib-text">
+                                            <p>Estr. p/ Wall Ferraz, s/n - Uberaba II, Oeiras.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
+                                        <div class="colorlib-icon">
+                                            <i class="icon-phone"></i>
+                                        </div>
+                                        <div class="colorlib-text">
+                                            <p><a href="tel://">(89) xxxx-xxxx</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-7 col-md-push-1">
+                                    <div class="row">
+                                        <div class="col-md-10 col-md-offset-1 col-md-pull-1 animate-box" data-animate-effect="fadeInRight">
+                                            <form action="">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="Nome">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="Email">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="Assunto">
+                                                </div>
+                                                <div class="form-group">
+                                                    <textarea name="" id="message" cols="30" rows="7" class="form-control" placeholder="Messagem"></textarea>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="submit" class="btn btn-primary btn-send-message" value="Enviar Messagem">
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+                <!-- end:colorlib-main -->
+            </div>
+            <!-- end:container-wrap -->
+        </div>
+        <!-- end:colorlib-page -->
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="{% static 'pag-canditato/js/jquery.min.js' %}"></script>
+    <!-- jQuery Easing -->
+    <script src="{% static 'pag-canditato/js/jquery.easing.1.3.js' %}"></script>
+    <!-- Bootstrap -->
+    <script src="{% static 'pag-canditato/js/bootstrap.min.js' %}"></script>
+    <!-- Waypoints -->
+    <script src="{% static 'pag-canditato/js/jquery.waypoints.min.js' %}"></script>
+    <!-- Flexslider -->
+    <script src="{% static 'pag-canditato/js/jquery.flexslider-min.js' %}"></script>
+    <!-- Owl carousel -->
+    <script src="{% static 'pag-canditato/js/owl.carousel.min.js' %}"></script>
+    <!-- Counters -->
+    <script src="{% static 'pag-canditato/js/jquery.countTo.js' %}"></script>
+    <!-- MAIN JS -->
+    <script src="{% static 'pag-canditato/js/main.js' %}"></script>
+
+
+    <!-- JS formulario de registro -->
+    <!-- <script src="{% static 'regform/regform/vendor/jquery/jquery-reg.min.js' %}"></script> -->
+    <script src="{% static 'regform/regform/vendor/nouislider/nouislider-reg.min.js' %}"></script>
+    <script src="{% static 'regform/regform/vendor/wnumb/wNumb-reg.js' %}"></script>
+    <script src="{% static 'regform/regform/vendor/jquery-validation/dist/jquery.validate-reg.min.js' %}"></script>
+    <script src="{% static 'regform/regform/vendor/jquery-validation/dist/additional-methods-reg.min.js' %}"></script>
+    <script src="{% static 'regform/regform/js/main-reg.js' %}"></script>
+
+</body>
+
+</html>
+
+
+
+
+<!-- <div id="colorlib-counter" class="colorlib-counters" style="background-image: url(images/cover_bg_1.jpg);" data-stellar-background-ratio="0.5">
+				<div class="overlay"></div>
+				<div class="colorlib-narrow-content">
+					<div class="row">
+					</div>
+					<div class="row">
+						<div class="col-md-3 text-center animate-box">
+							<span class="colorlib-counter js-counter" data-from="0" data-to="309" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="colorlib-counter-label">Cups of coffee</span>
+						</div>
+						<div class="col-md-3 text-center animate-box">
+							<span class="colorlib-counter js-counter" data-from="0" data-to="356" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="colorlib-counter-label">Projects</span>
+						</div>
+						<div class="col-md-3 text-center animate-box">
+							<span class="colorlib-counter js-counter" data-from="0" data-to="30" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="colorlib-counter-label">Clients</span>
+						</div>
+						<div class="col-md-3 text-center animate-box">
+							<span class="colorlib-counter js-counter" data-from="0" data-to="10" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="colorlib-counter-label">Partners</span>
+						</div>
+					</div>
+				</div>
+			</div> -->

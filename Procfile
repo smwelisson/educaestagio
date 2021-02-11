@@ -1,0 +1,1 @@
+web: gunicorn educaestagio.wsgi --log-file -
