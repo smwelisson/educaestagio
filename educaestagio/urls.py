@@ -1,14 +1,13 @@
 from django.contrib import admin
 from django.urls import path
-from educaestagio.core.views import home, login, candidato, empresa, about
-from educaestagio.subscriptions.views import subscribe
+from educaestagio.core.views import home, login, candidato, empresa, sobre
+
 
 urlpatterns = [
-    path('', home),
-    path('login', login),
-    path('candidato', candidato),
-    path('empresa', empresa),
-    path('about', about),
-    path('inscricao/', subscribe),
+    path('', home, name='home'),
+    path('login/', login, name='login'),
+    path('candidato/', candidato, name='candidato'),
+    path('empresa/', empresa, name='empresa'),
+    path('sobre/', sobre, name='sobre'),
     path('admin/', admin.site.urls),
 ]

@@ -17,5 +17,5 @@ def empresa(request):
     return render(request, 'empresa.html')
 
 
-def about(request):
-    return render(request, 'about.html')
+def sobre(request):
+    return render(request, 'sobre.html')

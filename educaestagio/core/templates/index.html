@@ -36,18 +36,17 @@
                 <nav class="main_nav_container">
                     <div class="main_nav">
                         <ul class="main_nav_list">
-                            <li class="main_nav_item"><a href="index.html">Início</a></li>
-                            <li class="main_nav_item"><a href="candidato.html">Candidatos</a></li>
-                            <li class="main_nav_item"><a href="empresa.html">Empresa</a></li>
-                            <li class="main_nav_item"><a href="ie.html">Instituições</a></li>
-                            <li class="main_nav_item"><a href="sobre.html">Sobre</a></li>
+                            <li class="main_nav_item"><a href="{% url 'home' %}">Início</a></li>
+                            <li class="main_nav_item"><a href="{% url 'candidato' %}">Candidatos</a></li>
+                            <li class="main_nav_item"><a href="{% url 'empresa' %}">Empresa</a></li>
+                            <li class="main_nav_item"><a href="{% url 'sobre' %}">Sobre</a></li>
                         </ul>
                     </div>
                 </nav>
             </div>
             
             <div class="header_side d-flex flex-row justify-content-center align-items-center">
-                <span><a href="login.html">Entrar/Cadastrar</a></span>
+                <span><a href="{% url 'login' %}">Entrar/Cadastrar</a></span>
             </div>
 
             <!-- Hamburger MOBILE-->  
@@ -69,12 +68,11 @@
             <div class="menu_inner menu_mm">
                 <div class="menu menu_mm">
                     <ul class="menu_list menu_mm">
-                        <li class="menu_item menu_mm"><a href="index.html">Início</a></li>
-                        <li class="menu_item menu_mm"><a href="candidato">Candidatos</a></li>
-                        <li class="menu_item menu_mm"><a href="empresa.html">Empresas</a></li>
-                        <li class="menu_item menu_mm"><a href="ie.html">Instituições</a></li>
-                        <li class="menu_item menu_mm"><a href="sobre.html">Sobre</a></li>
-                        <li class="menu_item menu_mm"><a href="login.html">ENTRAR</a> </li>
+                        <li class="menu_item menu_mm"><a href="{% url 'home' %}">Início</a></li>
+                        <li class="menu_item menu_mm"><a href="{% url 'candidato' %}">Candidatos</a></li>
+                        <li class="menu_item menu_mm"><a href="{% url 'empresa' %}">Empresas</a></li>
+                        <li class="menu_item menu_mm"><a href="{% url 'sobre' %}">Sobre</a></li>
+                        <li class="menu_item menu_mm"><a href="{% url 'login' %}">ENTRAR</a> </li>
                     </ul>
                 </div>
             </div>
