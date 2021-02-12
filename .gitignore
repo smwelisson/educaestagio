@@ -1,6 +1,9 @@
-.DS_Store
+.env
+.enveduca
 .idea
-__pycache__/
 *.sqlite3
-.educaestagio
+__pycache__/
 staticfiles
+.DS_Store
+.github
+
