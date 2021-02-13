@@ -127,6 +127,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 # testar: https://educastatic-3fbe8.web.app/
-STATIC_URL = 'https://educastatic-3fbe8.firebaseapp.com/'
-# STATIC_URL = '/static/'
+# STATIC_URL = 'https://educastatic-3fbe8.firebaseapp.com/'
+STATIC_URL = 'core/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
