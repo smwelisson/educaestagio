@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from educaestagio.core.views import home, login, candidato, empresa, sobre
 
 
@@ -10,4 +10,5 @@ urlpatterns = [
     path('empresa/', empresa, name='empresa'),
     path('sobre/', sobre, name='sobre'),
     path('admin/', admin.site.urls),
+    path('accounts/', include('allauth.urls')),
 ]
