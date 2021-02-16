@@ -46,7 +46,12 @@
             </div>
             
             <div class="header_side d-flex flex-row justify-content-center align-items-center">
-                <span><a href="{% url 'login' %}">Entrar/Cadastrar</a></span>
+                {% if  user.is_authenticated %}
+                <span><a href="{% url 'account_logout' %}">Oi, {{user.username}}! SAIR?</a></span>
+                {% else %}
+                <span><a href="{% url 'account_login' %}">Entrar</a></span>
+                <span><a href="{% url 'account_signup' %}">Cadastrar</a></span>
+                {% endif %}
             </div>
 
             <!-- Hamburger MOBILE-->  
