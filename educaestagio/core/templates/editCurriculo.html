@@ -82,23 +82,15 @@
                                         <div class="container">
                                             <div class="signup-content">
                                                 <div class="signup-form">
-
-                                                    <table>
+                                                    <form method="POST" class="register-form" id="register-form">
                                                         {% block content %}
-                                                        {% for inf in object_list %}
-                                                        <ul>
-                                                            <li>{{ inf.nome }}</li>
-                                                            <li>{{ inf.bairro }}</li>
-                                                            <li>{{ inf.telefone }}</li>
-                                                        </ul>
+                                                        {% csrf_token %}
+                                                        {{ form.as_p }}
 
-                                                        <a href="{% url 'editCurriculo' inf.pk %}" class="btn btn-warning btn-sm" type="submit" title="Editar" name="Editar">Editar</a>
-                                                        <a href="{% url 'delCurriculo' inf.pk %}" class="btn btn-warning btn-sm" type="submit" title="Excluir" name="Excluir">Excluir</a>
+                                                        <button href="{% url 'candidato' %}" class="btn btn-warning btn-sm" type="submit" title="Editar" name="Editar">Editar</button>
 
-                                                        {% endfor %}
                                                         {% endblock %}
-                                                    </table>
-
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>

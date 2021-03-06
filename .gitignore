@@ -1,5 +1,6 @@
 .env
 .enveduca
+.venveduca
 .idea
 *.sqlite3
 __pycache__/

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table>
+    {% block content %}
+    {% for inf in object_list %}
+        <ul>
+            <li>{{ inf.nome }}</li>
+            <li>{{ inf.bairro }}</li>
+            <li>{{ inf.telefone }}</li>
+        </ul>
+
+        <input type="submit" value="Submit" class="submit" id="submit" name="Editar" />
+        <input type="submit" value="Reset" class="submit" id="reset" name="Deletar" />
+    {% endfor %}
+    {% endblock %}
+    </table>
+</body>
+</html>
