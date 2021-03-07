@@ -82,23 +82,15 @@
                                         <div class="container">
                                             <div class="signup-content">
                                                 <div class="signup-form">
-
-                                                    <table>
-                                                        {% block content %}
-                                                        {% for inf in object_list %}
-                                                        <ul>
-                                                            <li>{{ inf.nome }}</li>
-                                                            <li>{{ inf.bairro }}</li>
-                                                            <li>{{ inf.telefone }}</li>
-                                                        </ul>
-
-                                                        <a href="{% url 'editCurriculo' inf.pk %}" class="btn btn-warning btn-sm" type="submit" title="Editar" name="Editar">Editar</a>
-                                                        <a href="{% url 'delCurriculo' inf.pk %}" class="btn btn-warning btn-sm" type="submit" title="Excluir" name="Excluir">Excluir</a>
-
-                                                        {% endfor %}
+                                                    <form method="POST" class="register-form" id="register-form">
+                                                        {% load crispy_forms_tags %}
+                                                        {% csrf_token %}
+                                                        {{ form|crispy }}
+                                                        {% block forms %}
+                                                        <button href="{% url 'candidato' %}" class="btn btn-warning btn-sm" type="submit" title="Salvar" name="Salvar">Salvar</button>
                                                         {% endblock %}
-                                                    </table>
 
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>

@@ -28,7 +28,7 @@
                 <div class="logo_container">
                     <div class="logo">
                         <img src="{% static 'images/capelo.svg' %}" width="100" alt="">
-                        <span>EducaEstágio</span>
+                        <span><a style="color:black" href="{% url 'home' %}">EducaEstágio</a></span>
                     </div>
                 </div>
 
@@ -36,10 +36,12 @@
                 <nav class="main_nav_container">
                     <div class="main_nav">
                         <ul class="main_nav_list">
-                            <li class="main_nav_item"><a href="{% url 'home' %}">Início</a></li>
-                            <li class="main_nav_item"><a href="{% url 'candidato' %}">Candidatos</a></li>
-                            <li class="main_nav_item"><a href="{% url 'empresa' %}">Empresa</a></li>
-                            <li class="main_nav_item"><a href="{% url 'sobre' %}">Sobre</a></li>
+<!--                            <li class="main_nav_item"><a href="{% url 'home' %}">Início</a></li>-->
+<!--                            {% if  user.is_authenticated %}-->
+<!--                            {% else %}-->
+<!--                            <li class="main_nav_item"><a href="{% url 'account_login' %}">Candidatos</a></li>-->
+<!--                              {% endif %}-->
+<!--                            <li class="main_nav_item"><a href="{% url 'sobre' %}">Sobre</a></li>-->
                         </ul>
                     </div>
                 </nav>
@@ -49,8 +51,8 @@
                 {% if  user.is_authenticated %}
                 <span><a href="{% url 'account_logout' %}">Oi, {{user.username}}! SAIR?</a></span>
                 {% else %}
-                <span><a href="{% url 'account_login' %}">Entrar</a></span>
-                <span><a href="{% url 'account_signup' %}">Cadastrar</a></span>
+                <span><a href="{% url 'account_login' %}">Entrar /</a>
+                    <a href="{% url 'account_signup' %}">Cadastrar</a></span>
                 {% endif %}
             </div>
 
@@ -74,10 +76,12 @@
                 <div class="menu menu_mm">
                     <ul class="menu_list menu_mm">
                         <li class="menu_item menu_mm"><a href="{% url 'home' %}">Início</a></li>
-                        <li class="menu_item menu_mm"><a href="{% url 'candidato' %}">Candidatos</a></li>
-                        <li class="menu_item menu_mm"><a href="{% url 'empresa' %}">Empresas</a></li>
-                        <li class="menu_item menu_mm"><a href="{% url 'sobre' %}">Sobre</a></li>
-                        <li class="menu_item menu_mm"><a href="{% url 'login' %}">ENTRAR</a> </li>
+<!--                            {% if  user.is_authenticated %}-->
+<!--                            {% else %}-->
+                            <li class="main_nav_item"><a href="{% url 'account_login' %}">ENTRAR</a></li>
+<!--                              {% endif %}-->
+<!--                        <li class="menu_item menu_mm"><a href="{% url 'sobre' %}">Sobre</a></li>-->
+<!--                        <li class="menu_item menu_mm"><a href="{% url 'account_login' %}">ENTRAR</a> </li>-->
                     </ul>
                 </div>
             </div>
@@ -139,33 +143,33 @@
             <div class="hero_boxes_inner">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-4 hero_box_col">
-                            <div class="hero_box d-flex flex-row align-items-center justify-content-start">
-                                <img src="{% static 'images/exam.svg' %}" class="svg" alt="">
-                                <div class="hero_box_content">
-                                    <h2 class="hero_box_title">Cadastre seu curriculo</h2>
-                                    <!-- <a href="courses.html" class="hero_box_link"></a> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 hero_box_col">
-                            <div class="hero_box d-flex flex-row align-items-center justify-content-start">
-                                <img src="{% static 'images/empresa.svg' %}" class="svg" alt="">
-                                <div class="hero_box_content">
-                                    <h2 class="hero_box_title">Oferte vagas</h2>
-                                    <!-- <a href="courses.html" class="hero_box_link">view more</a>  -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 hero_box_col">
-                            <div class="hero_box d-flex flex-row align-items-center justify-content-start">
-                                <img src="{% static 'images/instituicao.svg' %}" class="svg" alt="">
-                                <div class="hero_box_content">
-                                    <h2 class="hero_box_title">Associe sua Instituição</h2>
-                                    <!-- <a href="teachers.html" class="hero_box_link">view more</a> -->
-                                </div>
-                            </div>
-                        </div>
+<!--                        <div class="col-lg-4 hero_box_col">-->
+<!--                            <div class="hero_box d-flex flex-row align-items-center justify-content-start">-->
+<!--                                <img src="{% static 'images/exam.svg' %}" class="svg" alt="">-->
+<!--                                <div class="hero_box_content">-->
+<!--                                    <h2 class="hero_box_title">Cadastre seu curriculo</h2>-->
+<!--                                    &lt;!&ndash; <a href="courses.html" class="hero_box_link"></a> &ndash;&gt;-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="col-lg-4 hero_box_col">-->
+<!--                            <div class="hero_box d-flex flex-row align-items-center justify-content-start">-->
+<!--                                <img src="{% static 'images/empresa.svg' %}" class="svg" alt="">-->
+<!--                                <div class="hero_box_content">-->
+<!--                                    <h2 class="hero_box_title">Oferte vagas</h2>-->
+<!--                                    &lt;!&ndash; <a href="courses.html" class="hero_box_link">view more</a>  &ndash;&gt;-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="col-lg-4 hero_box_col">-->
+<!--                            <div class="hero_box d-flex flex-row align-items-center justify-content-start">-->
+<!--                                <img src="{% static 'images/instituicao.svg' %}" class="svg" alt="">-->
+<!--                                <div class="hero_box_content">-->
+<!--                                    <h2 class="hero_box_title">Associe sua Instituição</h2>-->
+<!--                                    &lt;!&ndash; <a href="teachers.html" class="hero_box_link">view more</a> &ndash;&gt;-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
                     </div>
                 </div>
             </div>
@@ -279,7 +283,15 @@
                                 <li class="footer_contact_item">
                                     <div class="footer_contact_icon">
                                         <img src="{% static 'images/envelope.svg' %}" alt="https://www.flaticon.com/authors/lucy-g">
-                                    </div>emailgenerico@generico.com
+                                    </div>
+                                    emailgenerico@generico.com
+<!--                                    <li class="main_nav_item"><a href="{% url 'sobre' %}">Sobre</a></li>-->
+                                </li>
+                                <li class="footer_contact_item">
+                                    <div class="footer_contact_icon">
+                                        <img src="{% static 'images/information.svg' %}" alt="https://www.flaticon.com/authors/lucy-g">
+                                    </div>
+                                    <a href="{% url 'sobre' %}">Sobre</a>
                                 </li>
                             </ul>
                         </div>
