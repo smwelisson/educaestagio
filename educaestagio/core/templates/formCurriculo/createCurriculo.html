@@ -83,11 +83,13 @@
                                             <div class="signup-content">
                                                 <div class="signup-form">
                                                     <form method="POST" class="register-form" id="register-form">
+                                                        {% load crispy_forms_tags %}
                                                         {% csrf_token %}
-                                                        {{ form.as_p }}
+                                                        {{ form|crispy }}
                                                         {% block forms %}
                                                         <button href="{% url 'candidato' %}" class="btn btn-warning btn-sm" type="submit" title="Salvar" name="Salvar">Salvar</button>
                                                         {% endblock %}
+
                                                     </form>
                                                 </div>
                                             </div>
