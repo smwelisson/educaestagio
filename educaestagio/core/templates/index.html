@@ -36,12 +36,10 @@
                 <nav class="main_nav_container">
                     <div class="main_nav">
                         <ul class="main_nav_list">
-<!--                            <li class="main_nav_item"><a href="{% url 'home' %}">Início</a></li>-->
-<!--                            {% if  user.is_authenticated %}-->
-<!--                            {% else %}-->
-<!--                            <li class="main_nav_item"><a href="{% url 'account_login' %}">Candidatos</a></li>-->
-<!--                              {% endif %}-->
-<!--                            <li class="main_nav_item"><a href="{% url 'sobre' %}">Sobre</a></li>-->
+                            {% if  user.is_authenticated %}
+                            <li class="main_nav_item"><a href="">Bem vindo, {{user.username}}</a></li>
+                            {% else %}
+                            {% endif %}
                         </ul>
                     </div>
                 </nav>
@@ -49,10 +47,11 @@
             
             <div class="header_side d-flex flex-row justify-content-center align-items-center">
                 {% if  user.is_authenticated %}
-                <span><a href="{% url 'account_logout' %}">Oi, {{user.username}}! SAIR?</a></span>
+                <span><a style="color:black" href="{% url 'candidato' %}">Area do Candidato /</a>
+                    <a style="color:black" href="{% url 'account_logout' %}">Sair</a></span>
                 {% else %}
-                <span><a href="{% url 'account_login' %}">Entrar /</a>
-                    <a href="{% url 'account_signup' %}">Cadastrar</a></span>
+                <span><a style="color:black" href="{% url 'account_login' %}">Entrar /</a>
+                    <a style="color:black" href="{% url 'account_signup' %}">Cadastrar</a></span>
                 {% endif %}
             </div>
 
@@ -75,12 +74,30 @@
             <div class="menu_inner menu_mm">
                 <div class="menu menu_mm">
                     <ul class="menu_list menu_mm">
-                        <li class="menu_item menu_mm"><a href="{% url 'home' %}">Início</a></li>
+                        {% if  user.is_authenticated %}
+                        <li class="main_nav_item"><a href="">Bem vindo, {{user.username}}</a></li>
+                        <li><br></li>
+                        <li class="menu_item menu_mm">
+                            <span><a style="color:black" href="{% url 'candidato' %}">Area do Candidato</a></span>
+                            <li><br></li>
+                        </li>
+                        <li class="menu_item menu_mm">
+                            <span><a style="color:black" href="{% url 'account_logout' %}">Sair</a></span>
+                        </li>
+                        {% else %}
+                        <li class="menu_item menu_mm">
+                            <span><a style="color:black" href="{% url 'account_login' %}">Entrar</a></span>
+                            <li><br></li>
+                        </li>
+                        <li class="menu_item menu_mm">
+                            <span><a style="color:black" href="{% url 'account_signup' %}">Cadastrar</a></span>
+                        </li>
+                        {% endif %}
+<!--                        <li class="menu_item menu_mm"><a href="{% url 'home' %}">Início</a></li>-->
 <!--                            {% if  user.is_authenticated %}-->
 <!--                            {% else %}-->
-                            <li class="main_nav_item"><a href="{% url 'account_login' %}">ENTRAR</a></li>
+<!--                            <li class="main_nav_item"><a href="{% url 'account_login' %}">ENTRAR</a></li>-->
 <!--                              {% endif %}-->
-<!--                        <li class="menu_item menu_mm"><a href="{% url 'sobre' %}">Sobre</a></li>-->
 <!--                        <li class="menu_item menu_mm"><a href="{% url 'account_login' %}">ENTRAR</a> </li>-->
                     </ul>
                 </div>
@@ -100,7 +117,6 @@
 
                     <!-- Hero Slide -->
                     <div class="hero_slide">
-<!--                        <div class="hero_slide_background" style="background-image:url(images/img_inicio.jpg)"></div>-->
                         <div class="hero_slide_background" style="background-image:url({% static 'images/img_inicio.jpg' %})"></div>
                         <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
                             <div class="hero_slide_content text-center">
@@ -131,49 +147,13 @@
                     <!-- tenha acesso às melhores vagas de trainee e estágio. -->
                 </div>
 
-                <div class="hero_slider_left hero_slider_nav trans_200"><span class="trans_200"><img src="{% static 'icons/left-arrow.svg' %}" width="20" alt=""></span></div>
-                <div class="hero_slider_right hero_slider_nav trans_200"><span class="trans_200"> <img src="{% static 'icons/right-arrow.svg' %}" width="20" alt=""></span></div>
+                <div class="hero_slider_left hero_slider_nav trans_200"><span class="trans_200"><img src="{% static 'images/left-arrow.svg' %}" width="20" alt=""></span></div>
+                <div class="hero_slider_right hero_slider_nav trans_200"><span class="trans_200"> <img src="{% static 'images/right-arrow.svg' %}" width="20" alt=""></span></div>
             </div>
             <span class="oi oi-arrow-thick-right"></span>
         </div>
-<br>
-<br>
-
-        <div class="hero_boxes">
-            <div class="hero_boxes_inner">
-                <div class="container">
-                    <div class="row">
-<!--                        <div class="col-lg-4 hero_box_col">-->
-<!--                            <div class="hero_box d-flex flex-row align-items-center justify-content-start">-->
-<!--                                <img src="{% static 'images/exam.svg' %}" class="svg" alt="">-->
-<!--                                <div class="hero_box_content">-->
-<!--                                    <h2 class="hero_box_title">Cadastre seu curriculo</h2>-->
-<!--                                    &lt;!&ndash; <a href="courses.html" class="hero_box_link"></a> &ndash;&gt;-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 hero_box_col">-->
-<!--                            <div class="hero_box d-flex flex-row align-items-center justify-content-start">-->
-<!--                                <img src="{% static 'images/empresa.svg' %}" class="svg" alt="">-->
-<!--                                <div class="hero_box_content">-->
-<!--                                    <h2 class="hero_box_title">Oferte vagas</h2>-->
-<!--                                    &lt;!&ndash; <a href="courses.html" class="hero_box_link">view more</a>  &ndash;&gt;-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="col-lg-4 hero_box_col">-->
-<!--                            <div class="hero_box d-flex flex-row align-items-center justify-content-start">-->
-<!--                                <img src="{% static 'images/instituicao.svg' %}" class="svg" alt="">-->
-<!--                                <div class="hero_box_content">-->
-<!--                                    <h2 class="hero_box_title">Associe sua Instituição</h2>-->
-<!--                                    &lt;!&ndash; <a href="teachers.html" class="hero_box_link">view more</a> &ndash;&gt;-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-                    </div>
-                </div>
-            </div>
-        </div>
+            <br>
+            <br>
 
         <!-- PAINEL DE VAGAS -->
 
@@ -291,7 +271,7 @@
                                     <div class="footer_contact_icon">
                                         <img src="{% static 'images/information.svg' %}" alt="https://www.flaticon.com/authors/lucy-g">
                                     </div>
-                                    <a href="{% url 'sobre' %}">Sobre</a>
+                                    <a style="color:gray" href="{% url 'sobre' %}">Sobre</a>
                                 </li>
                             </ul>
                         </div>

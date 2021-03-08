@@ -1,3 +1,4 @@
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -50,7 +51,8 @@
                 <aside id="colorlib-aside" role="complementary" class="border js-fullheight">
                     <div class="text-center">
                         <div class="author-img" style="background-image: url({% static 'pag-canditato/images/defaunt-user.png' %});"></div>
-                        <h1 id="colorlib-logo"><a>Caio Rolando da Rocha</a></h1>
+                        <h1 id="colorlib-logo">
+                            <a>{{user.username}}</a></h1>
                     </div>
                     <nav id="colorlib-main-menu" role="navigation" class="navbar">
                         <div id="navbar" class="collapse">
@@ -63,7 +65,7 @@
                         </div>
                         <div>
                             <ul>
-                                <li><a href="{% url 'home' %}">Sair</a></li>
+                                <li><a href="{% url 'account_logout' %}">Sair</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -78,30 +80,50 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="main">
-                                        <!-- Formulario do curriculo -->
-                                        <div class="container">
-                                            <div class="signup-content">
-                                                <div class="signup-form">
+                                        {% block form %}
+                                            {% if object_list %}
+                                                {% for inf in object_list %}
+                                                  <table class="table table-striped">
+                                                      <div class="colorlib-narrow-content">
+                                                          <div class="services page_section">
+                                                                <div class="row">
+                                                                    <div class="col">
+                                                                        <div class="section_title text-center">
+                                                                            <h1>Curriculo</h1>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
 
-                                                    <table>
-                                                        {% block content %}
-                                                        {% for inf in object_list %}
-                                                        <ul>
-                                                            <li>{{ inf.nome }}</li>
-                                                            <li>{{ inf.bairro }}</li>
-                                                            <li>{{ inf.telefone }}</li>
-                                                        </ul>
+                                                                  <p>Nome completo: <b>{{ inf.nome }}</b></p>
+                                                                  <p>Cidade: <b>{{ inf.cidade }}</b></p>
+                                                                  <p>Bairro: <b>{{ inf.bairro }}</b></p>
+                                                                  <p>Telefone: <b>{{ inf.telefone }}</b></p>
+                                                                  <p>Estado Civil: <b>{{ inf.estado_civil }}</b></p>
+                                                                  <p>Sexo: <b>{{ inf.sexo }}</b></p>
+                                                                  <p>Formação: <b>{{ inf.formacao }}</b></p>
+                                                                  <p>Curso: <b>{{ inf.curso }}</b></p>
+                                                          </div>
+                                                          <a href="{% url 'editCurriculo' inf.pk %}"
+                                                           class="btn btn-warning btn-sm" type="submit"
+                                                           title="Editar" name="Editar">Editar</a>
+                                                          <a href="{% url 'delCurriculo' inf.pk %}"
+                                                           class="btn btn-warning btn-sm" type="submit"
+                                                           title="Excluir" name="Excluir">Excluir</a>
+                                                      </div>
 
-                                                        <a href="{% url 'editCurriculo' inf.pk %}" class="btn btn-warning btn-sm" type="submit" title="Editar" name="Editar">Editar</a>
-                                                        <a href="{% url 'delCurriculo' inf.pk %}" class="btn btn-warning btn-sm" type="submit" title="Excluir" name="Excluir">Excluir</a>
-
-                                                        {% endfor %}
-                                                        {% endblock %}
-                                                    </table>
-
-                                                </div>
-                                            </div>
-                                        </div>
+                                                    {% endfor %}
+                                                    {% else %}
+                                                        <div class="section_title ">
+                                                            <h1>Você ainda não possui curriculo</h1>
+                                                        <br>
+                                                        <h3>Crie seu curriculo agora</h3>
+                                                        <a href="{% url 'createCurriculo' %}"
+                                                           class="btn btn-warning btn-sm" type="submit"
+                                                           title="Criar" name="Criar">Criar Curriculo</a>
+                                                        </div>
+                                                  </table>
+                                            {% endif %}
+                                        {% endblock %}
                                     </div>
                                 </div>
                             </div>
