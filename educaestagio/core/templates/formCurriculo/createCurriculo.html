@@ -50,7 +50,7 @@
                 <aside id="colorlib-aside" role="complementary" class="border js-fullheight">
                     <div class="text-center">
                         <div class="author-img" style="background-image: url({% static 'pag-canditato/images/defaunt-user.png' %});"></div>
-                        <h1 id="colorlib-logo"><a>Caio Rolando da Rocha</a></h1>
+                        <h1 id="colorlib-logo"><a>{{user.username}}</a></h1>
                     </div>
                     <nav id="colorlib-main-menu" role="navigation" class="navbar">
                         <div id="navbar" class="collapse">
@@ -63,7 +63,7 @@
                         </div>
                         <div>
                             <ul>
-                                <li><a href="{% url 'home' %}">Sair</a></li>
+                                <li><a href="{% url 'account_logout' %}">Sair</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -75,11 +75,12 @@
 
                     <section class="colorlib-about" data-section="curriculo">
                         <div class="colorlib-narrow-content">
+
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="main">
                                         <!-- Formulario do curriculo -->
-                                        <div class="container">
+<!--                                        <div class="container">-->
                                             <div class="signup-content">
                                                 <div class="signup-form">
                                                     <form method="POST" class="register-form" id="register-form">
@@ -93,7 +94,7 @@
                                                     </form>
                                                 </div>
                                             </div>
-                                        </div>
+<!--                                        </div>-->
                                     </div>
                                 </div>
                             </div>
@@ -104,6 +105,7 @@
 <!--                    VAGAS-->
                     <section class="colorlib-services" data-section="vagas">
                         <div class="colorlib-narrow-content">
+
                             <div class="services page_section">
 
                                 <div class="">
