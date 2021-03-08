@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'crispy_forms',
 ]
 
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
@@ -89,11 +90,11 @@ WSGI_APPLICATION = 'educaestagio.wsgi.application'
 # default_dburl = 'sqlite:///' + BASE_DIR / 'db.sqlite3'
 default_dburl = 'sqlite:///' + os.path.join(BASE_DIR,  'db.sqlite3')
 DATABASES = {
-    'default': config('DATABASE_URL', default=default_dburl, cast=dburl),
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
+    # 'default': config('DATABASE_URL', default=default_dburl, cast=dburl),
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
 
 
@@ -130,9 +131,9 @@ USE_L10N = True
 USE_TZ = True
 
 
-STATIC_URL = 'https://educastatic-3fbe8.web.app'
+# STATIC_URL = 'https://educastatic-3fbe8.web.app'
 
-# STATIC_URL = '/static/'
+STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
