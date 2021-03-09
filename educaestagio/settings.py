@@ -88,14 +88,18 @@ WSGI_APPLICATION = 'educaestagio.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 # default_dburl = 'sqlite:///' + BASE_DIR / 'db.sqlite3'
-default_dburl = 'sqlite:///' + os.path.join(BASE_DIR,  'db.sqlite3')
+# default_dburl = 'sqlite:///' + os.path.join(BASE_DIR,  'db.sqlite3')   usando esse com static local
 DATABASES = {
-    # 'default': config('DATABASE_URL', default=default_dburl, cast=dburl),
+    # 'default': config('DATABASE_URL', default=default_dburl, cast=dburl), usando esse com static local e comentar o abaixo
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+import dj_database_url
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
 
 
 # Password validation
@@ -131,7 +135,7 @@ USE_L10N = True
 USE_TZ = True
 
 
-STATIC_URL = '/https://educastatic-3fbe8.web.app/'
+STATIC_URL = 'https://educastatic-3fbe8.web.app'
 
 # STATIC_URL = '/static/'
 
