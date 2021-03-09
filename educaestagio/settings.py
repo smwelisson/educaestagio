@@ -92,10 +92,17 @@ WSGI_APPLICATION = 'educaestagio.wsgi.application'
 DATABASES = {
     # 'default': config('DATABASE_URL', default=default_dburl, cast=dburl), usando esse com static local e comentar o abaixo
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dejmdcciqkfhlg',
+        'HOST': 'ec2-54-164-241-193.compute-1.amazonaws.com',
+        'PORT': 5432,
+        'USER': 'thueodrbehmvbo',
+        'PASSWORD': '7b77b9f497a3fab985cf801b3f48f17739a043b42af45caf0e287126ec140c81'
     }
 }
+
 
 import dj_database_url
 db_from_env = dj_database_url.config()
@@ -138,7 +145,6 @@ USE_TZ = True
 STATIC_URL = 'https://educastatic-3fbe8.web.app'
 
 # STATIC_URL = '/static/'
-
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # django-allauth
