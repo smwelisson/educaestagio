@@ -13,7 +13,6 @@ import os
 from decouple import config
 from dj_database_url import parse as dburl
 from pathlib import Path
-import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -149,4 +148,3 @@ ACCOUNT_AUTHENTICATION_METHOD = "email"
 ACCOUNT_UNIQUE_EMAIL = True
 
 
-django_heroku.settings(locals())
