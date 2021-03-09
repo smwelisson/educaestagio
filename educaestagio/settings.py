@@ -128,7 +128,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-STATIC_URL = 'https://educastatic-3fbe8.web.app'
+STATIC_URL = 'https://educastatic-3fbe8.web.app/'
 
 # STATIC_URL = '/static/'
 
